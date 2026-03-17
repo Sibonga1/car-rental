@@ -12,3 +12,9 @@
   --color-light: #f1f5f9;
   --color-borderColor: #c4c7d2;
 }
+
+@layer utilities {
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-[#0558FE] to-[#A9CFFF];
+  }
+}
