@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Cars from "./pages/Cars";
 import CarDetails from "./pages/CarDetails";
 import MyBookings from "./pages/MyBookings";
+import Footer from "./components/Footer";
 
 const App = () => {
   // State to control the visibility of the login component
@@ -23,6 +24,8 @@ const App = () => {
         <Route path="/car-details/:id" element={<CarDetails />} />
         <Route path="/my-bookings" element={<MyBookings />} />
       </Routes>
+
+     {!isOwnerPath && <Footer />}
     </>
   );
 };
