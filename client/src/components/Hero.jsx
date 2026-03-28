@@ -23,7 +23,7 @@ const Hero = () => {
               className="w-full md:w-48 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">PickUp Location</option>
-              // Map through the cityList array to create options for each city
+              {/* Map through the cityList array to create options for each city */}
               {cityList.map((city) => (
                 <option key={city} value={city}>
                   {city}
