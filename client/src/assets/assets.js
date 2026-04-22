@@ -124,7 +124,7 @@ export const dummyCarData = [
         "pricePerDay": 2500,
         "location": "New York",
         "description": "The BMW M4 is a high-performance sedan produced by BMW. The M4 made its debut in 2014 as the first high-performance sedan ever produced by BMW.",
-        "isAvaliable": true,
+        "isAvaliable": false,
         "createdAt": "2025-04-16T07:26:56.215Z",
     },
     {
