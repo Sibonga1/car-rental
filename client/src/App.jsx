@@ -11,6 +11,7 @@ import ManageCars from "./pages/owner/ManageCars";
 import ManageBookings from "./pages/owner/ManageBookings";
 import Dashboard from "./pages/owner/Dashboard";
 import Layout from "./pages/owner/Layout";
+import Login from "./components/Login";
 
 const App = () => {
   // State to control the visibility of the login component
@@ -20,7 +21,10 @@ const App = () => {
 
   // Conditionally render the Navbar only if the current path does not start with '/owner'
   return (
+    
     <>
+      {showLogin && <Login setShowLogin={setShowLogin} />}
+      
       {!isOwnerPath && <Navbar setShowLogin={setShowLogin} />}
 
       <Routes>
