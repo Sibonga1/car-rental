@@ -117,3 +117,16 @@ export const changeBookingStatus = async (req, res) => {
         res.status(500).json({ success: false, message: error.message });
     }
 }
+
+//api to update user image
+
+export const updateUserImage = async (req, res) => {
+    try{
+       const { _id } = req.user; 
+        
+
+    }catch (error) {
+        console.log(error.message);
+        res.status(500).json({ success: false, message: error.message });
+    }
+}
