@@ -12,6 +12,7 @@ import ManageBookings from "./pages/owner/ManageBookings";
 import Dashboard from "./pages/owner/Dashboard";
 import Layout from "./pages/owner/Layout";
 import Login from "./components/Login";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   // State to control the visibility of the login component
@@ -21,10 +22,10 @@ const App = () => {
 
   // Conditionally render the Navbar only if the current path does not start with '/owner'
   return (
-    
     <>
+      <Toaster />
       {showLogin && <Login setShowLogin={setShowLogin} />}
-      
+
       {!isOwnerPath && <Navbar setShowLogin={setShowLogin} />}
 
       <Routes>
@@ -42,7 +43,7 @@ const App = () => {
         </Route>
       </Routes>
 
-     {!isOwnerPath && <Footer />}
+      {!isOwnerPath && <Footer />}
     </>
   );
 };

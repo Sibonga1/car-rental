@@ -1,7 +1,7 @@
 import express from "express";
 import { registerUser, loginUser } from "../Controller/userController.js";
 import { protect } from "../middleware/auth.js";
-import { getUserData } from "../Controller/userController.js";
+import { getUserData, getCars } from "../Controller/userController.js";
 
 const userRouter = express.Router();
 
@@ -11,5 +11,7 @@ userRouter.post("/register", registerUser);
 userRouter.post("/login", loginUser);
 //get user data
 userRouter.get("/data", protect, getUserData);
+//get all cars
+userRouter.get("/cars", getCars);
 
 export default userRouter;
